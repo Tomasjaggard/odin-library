@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Library</h1>
+        </nav>
+    </header>
+        <main>
+            <div class="container">
+                <div class="form-content">
+                    <h2>Add new book</h2>
+                    <form action="">
+                        <input type="text" name="name" id="bookName" placeholder="Title">
+                        <input type="text" name="author" id="bookAuthor" placeholder="Author">
+                        <input type="number" name="pages" id="bookPages" placeholder="Pages">
+                        <div class="readChecker">
+                            <p>Have you read it?</p><input type="checkbox" name="read" id="readCheck">
+                        </div>
+                        <button type="submit">ADD</button>
+                    </form>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <h3 class="bookTitle">hunger games</h3>
+                        <p class="bookAuthor">Jackie</p>
+                        <p class="bookPages">1 page</p>
+                        <button>Not read</button>
+                    </div>
+                    <div class="card">
+                        <h3 class="bookTitle">hunger games</h3>
+                        <p class="bookAuthor">Jackie</p>
+                        <p class="bookPages">1 page</p>
+                        <button onclick="changeReadStatus()">Not read</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2023 TomasJaggard</p>
+        </footer>
+    </div>
+</body>
+</html>
