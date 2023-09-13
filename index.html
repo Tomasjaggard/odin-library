@@ -13,33 +13,26 @@
             <h1>Library</h1>
         </nav>
     </header>
-        <main>
-            <div class="container">
-                <div class="form-content">
-                    <h2>Add new book</h2>
-                    <form id="myForm">
-                        <input type="text" name="name" id="bookName" placeholder="Title">
-                        <input type="text" name="author" id="bookAuthor" placeholder="Author">
-                        <input type="number" name="pages" id="bookPages" placeholder="Pages">
-                        <div class="readChecker">
-                            <p>Have you read it?</p><input type="checkbox" name="read" id="bookReadCheck">
-                        </div>
-                        <button type="submit" id="addBook">ADD</button>
-                    </form>
-                </div>
-                <div class="card-container">
-                    <div class="card">
-                        <h3 class="bookTitle">hunger games</h3>
-                        <p class="bookAuthor">Jackie</p>
-                        <p class="bookPages">1 page</p>
-                        <button class="bookButton">Not read</button>
+    <main>
+        <div class="container">
+            <div class="form-content">
+                <h2>Add new book</h2>
+                <form id="myForm">
+                    <input type="text" name="name" id="bookName" placeholder="Title" required>
+                    <input type="text" name="author" id="bookAuthor" placeholder="Author" required>
+                    <input type="number" name="pages" id="bookPages" placeholder="Pages" required>
+                    <div class="readChecker">
+                        <p>Have you read it?</p><input type="checkbox" name="read" id="bookReadCheck">
                     </div>
-                </div>
+                    <button type="submit" id="addBook">ADD</button>
+                </form>
             </div>
-        </main>
-        <footer>
-            <p>Copyright &copy; 2023 TomasJaggard</p>
-        </footer>
-    </div>
+            <div class="card-container">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023 TomasJaggard</p>
+    </footer>
 </body>
 </html>

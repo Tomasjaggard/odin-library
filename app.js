@@ -1,8 +1,3 @@
-// const addbookButton = document.getElementById('addBook')
-// const bookName = document.getElementById('bookName')
-// const bookAuthor = document.getElementById('bookAuthor')
-// const bookPages = document.getElementById('bookPages')
-// const bookReadCheck = document.getElementById('bookReadCheck')
 const cardContainer = document.querySelector('.card-container')
 const submitForm = document.getElementById("myForm")
 let myLibrary = [];
@@ -16,7 +11,7 @@ function Book(title, author, pages, readStatus){
     this.id = generateUniqueID()
 }
 
-const  generateUniqueID = () => ++idCount;
+const generateUniqueID = () => ++idCount;
 
 Book.prototype.info = function(){
     let readMsg = ''
@@ -27,13 +22,6 @@ Book.prototype.info = function(){
     }
     return `${title} by ${author}, ${pages} pages, ${readMsg}`
 }
-
-function addBookToLibrary(title,author,pages,readStatus){
-    let newBook = new Book(title,author,pages,readStatus)
-    myLibrary.push(newBook)
-}
-
-addBookToLibrary('The Hunger Games', 'Suzanne Colins', 374, true)
 
 function createLibrary(){
     cardContainer.innerHTML = ''
@@ -63,20 +51,15 @@ function createLibrary(){
         }
 
         newBookButton.addEventListener("click", function(){
-            // if(newBookButton.classList.contains(read))
             if(book.readStatus){
                 book.readStatus = false
                 newBookButton.classList.remove('read')
-                
-                
             } else {
                 newBookButton.classList.add('read')
                 book.readStatus = true
             }
             console.log(book)
         })
-
-        
 
         newCard.appendChild(newBookTitle)
         newCard.appendChild(newBookAuthor)
@@ -101,10 +84,6 @@ submitForm.addEventListener("submit", function(event) {
     const bookReadCheck = formData.get("read")
     addBook(bookName,bookAuthor,bookPages,bookReadCheck)
 })
-//function changeReadStatus(){
-    //Swap books readStatus to true if false, false if true
-    //Change button styling and textContent
-//}
 
 createLibrary()
 console.log(myLibrary)
