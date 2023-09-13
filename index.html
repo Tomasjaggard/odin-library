@@ -17,14 +17,14 @@
             <div class="container">
                 <div class="form-content">
                     <h2>Add new book</h2>
-                    <form action="">
+                    <form id="myForm">
                         <input type="text" name="name" id="bookName" placeholder="Title">
                         <input type="text" name="author" id="bookAuthor" placeholder="Author">
                         <input type="number" name="pages" id="bookPages" placeholder="Pages">
                         <div class="readChecker">
-                            <p>Have you read it?</p><input type="checkbox" name="read" id="readCheck">
+                            <p>Have you read it?</p><input type="checkbox" name="read" id="bookReadCheck">
                         </div>
-                        <button type="submit">ADD</button>
+                        <button type="submit" id="addBook">ADD</button>
                     </form>
                 </div>
                 <div class="card-container">
@@ -32,13 +32,7 @@
                         <h3 class="bookTitle">hunger games</h3>
                         <p class="bookAuthor">Jackie</p>
                         <p class="bookPages">1 page</p>
-                        <button>Not read</button>
-                    </div>
-                    <div class="card">
-                        <h3 class="bookTitle">hunger games</h3>
-                        <p class="bookAuthor">Jackie</p>
-                        <p class="bookPages">1 page</p>
-                        <button onclick="changeReadStatus()">Not read</button>
+                        <button class="bookButton">Not read</button>
                     </div>
                 </div>
             </div>

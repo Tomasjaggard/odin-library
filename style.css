@@ -6,6 +6,9 @@
 body{
     background-color: #f8fafc;
     max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header{
@@ -25,7 +28,12 @@ h1{
     justify-content: center;
 }
 
+main{
+    flex:1;
+}
+
 .container{
+    height: 100%;
     max-width: 80%;
     margin: 0 auto;
 }
@@ -43,6 +51,14 @@ h1{
 .form-content input[type="text"], .form-content input[type="number"] {
     display: flex;
     margin-bottom: 10px;
+    background-color: #cbd5e1;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.form-content input[type="text"]:focus, .form-content input[type="number"]:focus {
+    outline: none;
 }
 
 .form-content p{
@@ -94,19 +110,30 @@ form > button:active{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.card > button{
+.card > .bookButton{
     padding: 10px 15px;
     border: none;
     border-radius: 8px;
     background-color: lightcoral;
 }
 
-footer{
-    position: absolute;
+.bookButton.read{
+    background-color: green;
+}
+
+
+.card > .bookButton:active{
+    background-color: darkred;
+}
+
+.card > .bookButton.read:active{
+    background-color: darkgreen;
+}
+
+footer {
     background-color: #e2e8f0;
     text-align: center;
     width: 100%;
-    bottom: 0;
-    left: 0;
     padding: 10px 0px;
+    margin-top: 10px;
 }
