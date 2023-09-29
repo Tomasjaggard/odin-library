@@ -83,7 +83,9 @@ submitForm.addEventListener("submit", function(event) {
     const bookPages = formData.get("pages")
     const bookReadCheck = formData.get("read")
     addBook(bookName,bookAuthor,bookPages,bookReadCheck)
+    submitForm.reset()
 })
 
+myLibrary.push(new Book('test', 'test', 200,false))
 createLibrary()
 console.log(myLibrary)
